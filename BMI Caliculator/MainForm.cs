@@ -127,11 +127,19 @@ namespace Assignment3
             {
                 if (outVale > 0)
                 {
-                    if (bmiCalc.GetUNIT() == UnitTypes.Imperial)
+                    if (myBMICalculator.GetUnit() == UnitTypes.Imperial)
                     {
                         // convert ft to in
-                        bmiCalc.SetHeight(outVale * 12.00);
+                        myBMICalculator.SetHeight(outVale * 12.00);
                     }
+                    else
+                    {
+                        myBMICalculator.SetHeight(outVale / 100.0);
+                    }
+                }
+                else
+                {
+                    inputValid = false;
                 }
             }
         }

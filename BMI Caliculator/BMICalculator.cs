@@ -62,7 +62,7 @@ namespace Assignment3
             }
         }
 
-        public UnitTypes getUnit()
+        public UnitTypes GetUnit()
         {
             return unit;
         }
