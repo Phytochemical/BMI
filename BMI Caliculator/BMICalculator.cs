@@ -93,5 +93,41 @@ namespace Assignment3
             return bmiValue;
         }
         // public string NormalWeight()
+
+        /// <summary>
+        /// outputs weight category based on BMI
+        /// </summary>
+        /// <returns>weight category based on BMI</returns>
+        public string BmiWeightCategory()
+        {
+            double bmi = CalculateBMI();
+            string stringOut = "";
+
+            if (bmi > 40)
+            {
+                stringOut = "Overweight (Obesity class III)";
+            }
+            else if (bmi > 35)
+            {
+                stringOut = "Overweight (Obesity class II)";
+            }
+            else if (bmi > 30)
+            {
+                stringOut = "Overweight (Obesity class I)";
+            }
+            else if (bmi > 25)
+            {
+                stringOut = "Overweight (Pre-obesity)";
+            }
+            else if (bmi > 18.5)
+            {
+                stringOut = "Normal weight";
+            }
+            else
+            {
+                stringOut = "Undeweight";
+            }
+            return stringOut;
+        }
     }
 }

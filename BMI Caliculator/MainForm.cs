@@ -114,27 +114,33 @@ namespace Assignment3
 
         private void ReadUnitType()
         {
-
+            if (radioButtonMetric.Checked)
+            {
+                myBMICalculator.SetUnit(UnitTypes.Metric);
+            }
+            else
+            {
+                myBMICalculator.SetUnit(UnitTypes.Imperial);
+            }
         }
-
 
         private bool ReadHeight()
         {
-            double outVale = 0;
-            bool inputValid = double.TryParse(txtHeight.Text, out output);
+            double outValue = 0;
+            bool inputValid = double.TryParse(textBoxHightFeet.Text, out outValue);
 
             if (inputValid)
             {
-                if (outVale > 0)
+                if (outValue > 0)
                 {
                     if (myBMICalculator.GetUnit() == UnitTypes.Imperial)
                     {
                         // convert ft to in
-                        myBMICalculator.SetHeight(outVale * 12.00);
+                        myBMICalculator.SetHeight(outValue * 12.00);
                     }
                     else
                     {
-                        myBMICalculator.SetHeight(outVale / 100.0);
+                        myBMICalculator.SetHeight(outValue / 100.0);
                     }
                 }
                 else
@@ -142,6 +148,46 @@ namespace Assignment3
                     inputValid = false;
                 }
             }
+
+            if (inputValid == false)
+            {
+                MessageBox.Show("Invalid heigh value", "Error");
+            }
+
+            return inputValid;
+        }
+
+        private bool ReadWeight()
+        {
+            // output
+            double outValue = 0;
+            bool inputValid = double.TryParse(textBoxWeight.Text, out outValue);
+
+            if (inputValid)
+            {
+                if (outValue > 0)
+                {
+                    if (myBMICalculator.GetUnit() == UnitTypes.Imperial)
+                    {
+                        myBMICalculator.SetWeight(outValue * 12.00);
+                    }
+                    else
+                    {
+                        myBMICalculator.SetWeight(outValue / 100.0);
+                    }
+                }
+                else
+                {
+                    inputValid = false;
+                }
+            }
+
+            if (inputValid == false)
+            {
+                MessageBox.Show("Invalid heigh value", "Error");
+            }
+
+            return inputValid;
         }
 
         private void labelTextCalculateBMI_Click(object sender, EventArgs e)
