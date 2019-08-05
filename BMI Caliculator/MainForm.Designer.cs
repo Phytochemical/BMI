@@ -42,14 +42,16 @@
             this.labelWeightCategory = new System.Windows.Forms.Label();
             this.labelDisclaimer = new System.Windows.Forms.Label();
             this.radioButtonMetric = new System.Windows.Forms.RadioButton();
-            this.groupBoxRadioButton = new System.Windows.Forms.GroupBox();
+            this.groupBoxUnit = new System.Windows.Forms.GroupBox();
             this.radioButtonImperial = new System.Windows.Forms.RadioButton();
-            this.groupBoxRadioButton.SuspendLayout();
+            this.groupBoxResult = new System.Windows.Forms.GroupBox();
+            this.groupBoxUnit.SuspendLayout();
+            this.groupBoxResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonCalculateBMI
             // 
-            this.buttonCalculateBMI.Location = new System.Drawing.Point(80, 97);
+            this.buttonCalculateBMI.Location = new System.Drawing.Point(97, 94);
             this.buttonCalculateBMI.Name = "buttonCalculateBMI";
             this.buttonCalculateBMI.Size = new System.Drawing.Size(132, 34);
             this.buttonCalculateBMI.TabIndex = 0;
@@ -61,26 +63,26 @@
             // 
             this.textUerName.Location = new System.Drawing.Point(73, 12);
             this.textUerName.Name = "textUerName";
-            this.textUerName.Size = new System.Drawing.Size(300, 20);
+            this.textUerName.Size = new System.Drawing.Size(315, 20);
             this.textUerName.TabIndex = 1;
             // 
             // textBoxHightFeet
             // 
-            this.textBoxHightFeet.Location = new System.Drawing.Point(73, 42);
+            this.textBoxHightFeet.Location = new System.Drawing.Point(92, 42);
             this.textBoxHightFeet.Name = "textBoxHightFeet";
             this.textBoxHightFeet.Size = new System.Drawing.Size(47, 20);
             this.textBoxHightFeet.TabIndex = 2;
             // 
             // textBoxHightInches
             // 
-            this.textBoxHightInches.Location = new System.Drawing.Point(126, 42);
+            this.textBoxHightInches.Location = new System.Drawing.Point(145, 42);
             this.textBoxHightInches.Name = "textBoxHightInches";
             this.textBoxHightInches.Size = new System.Drawing.Size(47, 20);
             this.textBoxHightInches.TabIndex = 3;
             // 
             // textBoxWeight
             // 
-            this.textBoxWeight.Location = new System.Drawing.Point(73, 71);
+            this.textBoxWeight.Location = new System.Drawing.Point(92, 68);
             this.textBoxWeight.Name = "textBoxWeight";
             this.textBoxWeight.Size = new System.Drawing.Size(47, 20);
             this.textBoxWeight.TabIndex = 4;
@@ -116,7 +118,7 @@
             // labelCalculatedBMIOutput
             // 
             this.labelCalculatedBMIOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelCalculatedBMIOutput.Location = new System.Drawing.Point(126, 150);
+            this.labelCalculatedBMIOutput.Location = new System.Drawing.Point(116, 22);
             this.labelCalculatedBMIOutput.Name = "labelCalculatedBMIOutput";
             this.labelCalculatedBMIOutput.Size = new System.Drawing.Size(93, 17);
             this.labelCalculatedBMIOutput.TabIndex = 8;
@@ -124,7 +126,7 @@
             // labelTextCalculateBMI
             // 
             this.labelTextCalculateBMI.AutoSize = true;
-            this.labelTextCalculateBMI.Location = new System.Drawing.Point(26, 150);
+            this.labelTextCalculateBMI.Location = new System.Drawing.Point(15, 26);
             this.labelTextCalculateBMI.Name = "labelTextCalculateBMI";
             this.labelTextCalculateBMI.Size = new System.Drawing.Size(79, 13);
             this.labelTextCalculateBMI.TabIndex = 9;
@@ -134,7 +136,7 @@
             // labelTextWeightCategory
             // 
             this.labelTextWeightCategory.AutoSize = true;
-            this.labelTextWeightCategory.Location = new System.Drawing.Point(26, 180);
+            this.labelTextWeightCategory.Location = new System.Drawing.Point(15, 53);
             this.labelTextWeightCategory.Name = "labelTextWeightCategory";
             this.labelTextWeightCategory.Size = new System.Drawing.Size(86, 13);
             this.labelTextWeightCategory.TabIndex = 10;
@@ -143,7 +145,7 @@
             // labelWeightCategory
             // 
             this.labelWeightCategory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelWeightCategory.Location = new System.Drawing.Point(126, 179);
+            this.labelWeightCategory.Location = new System.Drawing.Point(116, 52);
             this.labelWeightCategory.Name = "labelWeightCategory";
             this.labelWeightCategory.Size = new System.Drawing.Size(93, 17);
             this.labelWeightCategory.TabIndex = 11;
@@ -151,11 +153,12 @@
             // labelDisclaimer
             // 
             this.labelDisclaimer.AutoSize = true;
-            this.labelDisclaimer.Location = new System.Drawing.Point(34, 217);
+            this.labelDisclaimer.Location = new System.Drawing.Point(15, 81);
             this.labelDisclaimer.Name = "labelDisclaimer";
             this.labelDisclaimer.Size = new System.Drawing.Size(185, 13);
             this.labelDisclaimer.TabIndex = 12;
             this.labelDisclaimer.Text = "Normal BMI is between 18.5 and 24.9";
+            this.labelDisclaimer.Click += new System.EventHandler(this.labelDisclaimer_Click);
             // 
             // radioButtonMetric
             // 
@@ -168,16 +171,16 @@
             this.radioButtonMetric.Text = "Metric (kg/cm)";
             this.radioButtonMetric.UseVisualStyleBackColor = true;
             // 
-            // groupBoxRadioButton
+            // groupBoxUnit
             // 
-            this.groupBoxRadioButton.Controls.Add(this.radioButtonImperial);
-            this.groupBoxRadioButton.Controls.Add(this.radioButtonMetric);
-            this.groupBoxRadioButton.Location = new System.Drawing.Point(225, 38);
-            this.groupBoxRadioButton.Name = "groupBoxRadioButton";
-            this.groupBoxRadioButton.Size = new System.Drawing.Size(148, 81);
-            this.groupBoxRadioButton.TabIndex = 14;
-            this.groupBoxRadioButton.TabStop = false;
-            this.groupBoxRadioButton.Text = "Unit of measurement";
+            this.groupBoxUnit.Controls.Add(this.radioButtonImperial);
+            this.groupBoxUnit.Controls.Add(this.radioButtonMetric);
+            this.groupBoxUnit.Location = new System.Drawing.Point(240, 38);
+            this.groupBoxUnit.Name = "groupBoxUnit";
+            this.groupBoxUnit.Size = new System.Drawing.Size(148, 75);
+            this.groupBoxUnit.TabIndex = 14;
+            this.groupBoxUnit.TabStop = false;
+            this.groupBoxUnit.Text = "Unit of measurement";
             // 
             // radioButtonImperial
             // 
@@ -190,17 +193,27 @@
             this.radioButtonImperial.Text = "Imperial unit";
             this.radioButtonImperial.UseVisualStyleBackColor = true;
             // 
+            // groupBoxResult
+            // 
+            this.groupBoxResult.Controls.Add(this.labelTextCalculateBMI);
+            this.groupBoxResult.Controls.Add(this.labelTextWeightCategory);
+            this.groupBoxResult.Controls.Add(this.labelDisclaimer);
+            this.groupBoxResult.Controls.Add(this.labelCalculatedBMIOutput);
+            this.groupBoxResult.Controls.Add(this.labelWeightCategory);
+            this.groupBoxResult.Location = new System.Drawing.Point(29, 151);
+            this.groupBoxResult.Name = "groupBoxResult";
+            this.groupBoxResult.Size = new System.Drawing.Size(344, 118);
+            this.groupBoxResult.TabIndex = 15;
+            this.groupBoxResult.TabStop = false;
+            this.groupBoxResult.Text = "Results for";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 251);
-            this.Controls.Add(this.groupBoxRadioButton);
-            this.Controls.Add(this.labelDisclaimer);
-            this.Controls.Add(this.labelWeightCategory);
-            this.Controls.Add(this.labelTextWeightCategory);
-            this.Controls.Add(this.labelTextCalculateBMI);
-            this.Controls.Add(this.labelCalculatedBMIOutput);
+            this.ClientSize = new System.Drawing.Size(418, 294);
+            this.Controls.Add(this.groupBoxResult);
+            this.Controls.Add(this.groupBoxUnit);
             this.Controls.Add(this.labelWeight);
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.labelHeight);
@@ -213,8 +226,10 @@
             this.Name = "MainForm";
             this.Text = "BMI (Body Mass Index)";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.groupBoxRadioButton.ResumeLayout(false);
-            this.groupBoxRadioButton.PerformLayout();
+            this.groupBoxUnit.ResumeLayout(false);
+            this.groupBoxUnit.PerformLayout();
+            this.groupBoxResult.ResumeLayout(false);
+            this.groupBoxResult.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,9 +250,10 @@
         private System.Windows.Forms.Label labelTextWeightCategory;
         private System.Windows.Forms.Label labelWeightCategory;
         private System.Windows.Forms.Label labelDisclaimer;
-        private System.Windows.Forms.GroupBox groupBoxRadioButton;
+        private System.Windows.Forms.GroupBox groupBoxUnit;
         private System.Windows.Forms.RadioButton radioButtonMetric;
         private System.Windows.Forms.RadioButton radioButtonImperial;
+        private System.Windows.Forms.GroupBox groupBoxResult;
     }
 }
 

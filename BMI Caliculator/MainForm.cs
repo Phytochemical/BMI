@@ -84,17 +84,15 @@ namespace Assignment3
         /// else bmiCalc.CalculateBMI ()
         /// </summary>
 
-        // TODO get user input and save them in bmiCalc object
         // read the input provided on the user name textbox textUserName.Text
-        // TODO DisplayResult()
-
         private void DisplayResults()
         {
             labelTextCalculateBMI.Text = myBMICalculator.CalculateBMI().ToString("f2");
             // lblResultYourBmi.Text = bmiCalc.CalculateBMI ( ).ToString ("0.00"); 
             // BMIWEIGHTCATEGORY
             labelTextWeightCategory.Text = myBMICalculator.BmiWeightCategory().ToString();
-            groupBoxRadioButton.Text = "Results for " + myBMICalculator.Name;
+            groupBoxUnit.Text = myBMICalculator.GetName();
+            //labelDisclaimer.Text = myBMICalculator.NormalWeight;
         }
 
         /// <summary>
@@ -106,6 +104,7 @@ namespace Assignment3
             bool isInputValid = false;
 
             ReadName();
+            ReadUnitType();
             isInputValid = ReadHeight();
             isInputValid = isInputValid && ReadWeight();
 
@@ -196,6 +195,11 @@ namespace Assignment3
         }
 
         private void labelUserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDisclaimer_Click(object sender, EventArgs e)
         {
 
         }
