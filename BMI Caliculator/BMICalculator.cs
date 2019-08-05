@@ -60,6 +60,7 @@ namespace Assignment3
             {
                 weight = doubleValue;
             }
+            Console.WriteLine("weight " + weight);
         }
 
         public UnitTypes GetUnit()
@@ -72,8 +73,8 @@ namespace Assignment3
             unit = value;
         }
 
-        // BMI = (weight / height)²
-        // BMI = (weight / height)²*703
+        // metric BMI = (weight / height)²
+        // imperial BMI = (weight / height)²*703
         public double CalculateBMI()
         {
             // imperial
@@ -88,6 +89,7 @@ namespace Assignment3
             {
                 conversionFactor = 1.0;
             }
+
             bmiValue = conversionFactor * weight / (height * height);
 
             return bmiValue;

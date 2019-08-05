@@ -87,11 +87,11 @@ namespace Assignment3
         // read the input provided on the user name textbox textUserName.Text
         private void DisplayResults()
         {
-            labelTextCalculateBMI.Text = myBMICalculator.CalculateBMI().ToString("f2");
+            labelCalculatedBMIOutput.Text = myBMICalculator.CalculateBMI().ToString("f2");
             // lblResultYourBmi.Text = bmiCalc.CalculateBMI ( ).ToString ("0.00"); 
             // BMIWEIGHTCATEGORY
-            labelTextWeightCategory.Text = myBMICalculator.BmiWeightCategory().ToString();
-            groupBoxUnit.Text = myBMICalculator.GetName();
+            labelWeightCategory.Text = myBMICalculator.BmiWeightCategory().ToString();
+            groupBoxResult.Text = "Results for " + myBMICalculator.GetName();
             //labelDisclaimer.Text = myBMICalculator.NormalWeight;
         }
 
