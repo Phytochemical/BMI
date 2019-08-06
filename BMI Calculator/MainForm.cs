@@ -137,12 +137,10 @@ namespace Assignment3
                     {
                         // convert ft to in
                         myBMICalculator.SetHeight(outValue * 12.00);
-                        Console.WriteLine("out value " + outValue);
                     }
                     else
                     {
                         myBMICalculator.SetHeight(outValue / 100.0);
-                        Console.WriteLine(outValue);
                     }
                 }
                 else
@@ -156,7 +154,6 @@ namespace Assignment3
                 MessageBox.Show("Invalid heigh value", "Error");
             }
 
-            Console.WriteLine("inputValid " + inputValid);
             return inputValid;
         }
 

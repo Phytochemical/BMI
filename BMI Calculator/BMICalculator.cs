@@ -46,9 +46,7 @@ namespace Assignment3
             if (doubleValue >= 0)
             {
                 height = doubleValue;
-                Console.WriteLine("height " + height);
             }
-            Console.WriteLine("height " + height);
         }
 
         public double GetWeight()
@@ -62,12 +60,10 @@ namespace Assignment3
             {
                 weight = doubleValue;
             }
-            Console.WriteLine("weight " + weight);
         }
 
         public UnitTypes GetUnit()
         {
-            Console.WriteLine("unit  " + unit);
             return unit;
         }
 
@@ -86,7 +82,6 @@ namespace Assignment3
 
             if (unit == UnitTypes.Imperial)
             {
-                Console.WriteLine("unit type " + unit);
                 conversionFactor = 703.0;
             }
             else
@@ -95,16 +90,6 @@ namespace Assignment3
             }
 
             bmiValue = conversionFactor * (weight / (height * height));
-            double baseBMI = (weight / (height * height));
-
-            Console.WriteLine(conversionFactor);
-            Console.WriteLine("height * height " + (height * height));
-            Console.WriteLine("weight " + (weight));
-            Console.WriteLine("weight / height * height " + (weight / (height * height)));
-            Console.WriteLine(baseBMI);
-            Console.WriteLine(703 * baseBMI);
-            Console.WriteLine(conversionFactor * (weight / (height * height)));
-            Console.WriteLine(bmiValue);
 
             return bmiValue;
         }
