@@ -203,5 +203,10 @@ namespace Assignment3
         {
 
         }
+
+        private void textBoxHightInches_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

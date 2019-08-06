@@ -79,6 +79,7 @@
             this.textBoxHightInches.Name = "textBoxHightInches";
             this.textBoxHightInches.Size = new System.Drawing.Size(47, 20);
             this.textBoxHightInches.TabIndex = 3;
+            this.textBoxHightInches.TextChanged += new System.EventHandler(this.textBoxHightInches_TextChanged);
             // 
             // textBoxWeight
             // 
