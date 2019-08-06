@@ -127,6 +127,7 @@ namespace Assignment3
         {
             double outValue = 0;
             bool inputValid = double.TryParse(textBoxHightFeet.Text, out outValue);
+            Console.WriteLine(outValue);
 
             if (inputValid)
             {
@@ -136,10 +137,12 @@ namespace Assignment3
                     {
                         // convert ft to in
                         myBMICalculator.SetHeight(outValue * 12.00);
+                        Console.WriteLine("out value " + outValue);
                     }
                     else
                     {
                         myBMICalculator.SetHeight(outValue / 100.0);
+                        Console.WriteLine(outValue);
                     }
                 }
                 else
@@ -153,9 +156,14 @@ namespace Assignment3
                 MessageBox.Show("Invalid heigh value", "Error");
             }
 
+            Console.WriteLine("inputValid " + inputValid);
             return inputValid;
         }
 
+        /// <summary>
+        /// Read height input and validates it and parse the data to BMI
+        /// </summary>
+        /// <returns></returns>
         private bool ReadWeight()
         {
             // output
@@ -168,11 +176,11 @@ namespace Assignment3
                 {
                     if (myBMICalculator.GetUnit() == UnitTypes.Imperial)
                     {
-                        myBMICalculator.SetWeight(outValue * 12.00);
+                        myBMICalculator.SetWeight(outValue);
                     }
                     else
                     {
-                        myBMICalculator.SetWeight(outValue / 100.0);
+                        myBMICalculator.SetWeight(outValue);
                     }
                 }
                 else
@@ -200,6 +208,16 @@ namespace Assignment3
         }
 
         private void labelDisclaimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxHightInches_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCalculatedBMIOutput_Click(object sender, EventArgs e)
         {
 
         }

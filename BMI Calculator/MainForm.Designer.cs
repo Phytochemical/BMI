@@ -79,6 +79,7 @@
             this.textBoxHightInches.Name = "textBoxHightInches";
             this.textBoxHightInches.Size = new System.Drawing.Size(47, 20);
             this.textBoxHightInches.TabIndex = 3;
+            this.textBoxHightInches.TextChanged += new System.EventHandler(this.textBoxHightInches_TextChanged);
             // 
             // textBoxWeight
             // 
@@ -122,6 +123,7 @@
             this.labelCalculatedBMIOutput.Name = "labelCalculatedBMIOutput";
             this.labelCalculatedBMIOutput.Size = new System.Drawing.Size(93, 17);
             this.labelCalculatedBMIOutput.TabIndex = 8;
+            this.labelCalculatedBMIOutput.Click += new System.EventHandler(this.labelCalculatedBMIOutput_Click);
             // 
             // labelTextCalculateBMI
             // 
