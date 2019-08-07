@@ -190,10 +190,10 @@
             this.radioButtonImperial.AutoSize = true;
             this.radioButtonImperial.Location = new System.Drawing.Point(18, 42);
             this.radioButtonImperial.Name = "radioButtonImperial";
-            this.radioButtonImperial.Size = new System.Drawing.Size(81, 17);
+            this.radioButtonImperial.Size = new System.Drawing.Size(109, 17);
             this.radioButtonImperial.TabIndex = 14;
             this.radioButtonImperial.TabStop = true;
-            this.radioButtonImperial.Text = "Imperial unit";
+            this.radioButtonImperial.Text = "Imperial unit (ft/lb)";
             this.radioButtonImperial.UseVisualStyleBackColor = true;
             this.radioButtonImperial.CheckedChanged += new System.EventHandler(this.radioButtonImperial_CheckedChanged);
             // 
