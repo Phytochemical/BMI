@@ -172,6 +172,7 @@
             this.radioButtonMetric.TabStop = true;
             this.radioButtonMetric.Text = "Metric (kg/cm)";
             this.radioButtonMetric.UseVisualStyleBackColor = true;
+            this.radioButtonMetric.CheckedChanged += new System.EventHandler(this.radioButtonMetric_CheckedChanged);
             // 
             // groupBoxUnit
             // 
@@ -194,6 +195,7 @@
             this.radioButtonImperial.TabStop = true;
             this.radioButtonImperial.Text = "Imperial unit";
             this.radioButtonImperial.UseVisualStyleBackColor = true;
+            this.radioButtonImperial.CheckedChanged += new System.EventHandler(this.radioButtonImperial_CheckedChanged);
             // 
             // groupBoxResult
             // 

@@ -26,9 +26,11 @@ namespace Assignment3
 
         }
 
-        // initiazlie GUI with the curent options, set defualt radioButton values
-        // encapsulate within a container component groupBox
-        // when one button is checked, rest should be unchecked
+        /// <summary>
+        /// initiazlie GUI with the current option, set defualt radioButton values
+        /// encapsulate within a container component groupBox
+        /// when one button is checked, rest should be unchecked
+        /// </summary>
         private void InitializeGUI()
         {
             // current instance of the class
@@ -76,14 +78,13 @@ namespace Assignment3
 
         /// <summary>
         /// get user input and save data in bmiCalc object
-        /// if txtName.Text == empty, bmiCalc.SetName (NoName);
-        /// else bmiCalc.SetName (txtName);
-        /// read hight value (txtHeight.Text) convert to double.TryParse ();
+        /// if textName.Text == empty, bmiCalc.SetName (NoName);
+        /// else bmiCalc.SetName (textName);
+        /// read hight value (textHeight.Text) convert to double.TryParse ();
         /// read weight value, validate double.TryParse
         /// if weight == double, save it to bmiCalc
-        /// else bmiCalc.CalculateBMI ()
+        /// else bmiCalc.CalculateBMI()
         /// </summary>
-
         // read the input provided on the user name textbox textUserName.Text
         private void DisplayResults()
         {
@@ -127,7 +128,6 @@ namespace Assignment3
         {
             double outValue = 0;
             bool inputValid = double.TryParse(textBoxHightFeet.Text, out outValue);
-            Console.WriteLine(outValue);
 
             if (inputValid)
             {
@@ -217,6 +217,36 @@ namespace Assignment3
         private void labelCalculatedBMIOutput_Click(object sender, EventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// check radioButtonMetric check status and revise the text to oindicate unit of measurement
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void radioButtonMetric_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonMetric.Checked)
+            {
+                labelHeight.Text = "Height (cm)";
+                labelWeight.Text = "Weight (kg)";
+                myBMICalculator.SetUnit(UnitTypes.Metric);
+            }
+        }
+
+        /// <summary>
+        /// check radioButtonImperial check status and revise the text to oindicate unit of measurement
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void radioButtonImperial_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonImperial.Checked)
+            {
+                labelHeight.Text = "Height (ft)";
+                labelWeight.Text = "Weight (lb)";
+                myBMICalculator.SetUnit(UnitTypes.Imperial);
+            }
         }
     }
 }
