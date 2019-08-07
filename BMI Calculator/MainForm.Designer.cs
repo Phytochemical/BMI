@@ -210,6 +210,7 @@
             this.groupBoxResult.TabIndex = 15;
             this.groupBoxResult.TabStop = false;
             this.groupBoxResult.Text = "Results for";
+            this.groupBoxResult.Enter += new System.EventHandler(this.groupBoxResult_Enter);
             // 
             // MainForm
             // 

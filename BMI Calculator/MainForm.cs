@@ -27,7 +27,7 @@ namespace Assignment3
         }
 
         /// <summary>
-        /// initiazlie GUI with the current option, set defualt radioButton values
+        /// initiazlie GUI with the preset option, set defualt radioButton values
         /// encapsulate within a container component groupBox
         /// when one button is checked, rest should be unchecked
         /// </summary>
@@ -247,6 +247,10 @@ namespace Assignment3
                 labelWeight.Text = "Weight (lb)";
                 myBMICalculator.SetUnit(UnitTypes.Imperial);
             }
+        }
+
+        private void groupBoxResult_Enter(object sender, EventArgs e)
+        {
         }
     }
 }
