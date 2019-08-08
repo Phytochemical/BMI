@@ -38,12 +38,16 @@ namespace Assignment3
             this.Text = "BMI calculator";
 
             // input
-            radioButtonImperial.Checked = true;
-            labelHeight.Text = "Height (ft)";
-            labelWeight.Text = "Weight (lbs)";
+            radioButtonMetric.Checked = true;
+            labelHeight.Text = "Height (cm)";
+            labelFeet.Text = "ft";
+            labelInch.Text = "in";
+            labelWeight.Text = "Weight (kg)";
 
             // output
             textBoxHightFeet.Text = "";
+            labelFeet.Text = "";
+            labelInch.Text = "";
             textBoxWeight.Text = "";
         }
 
@@ -244,6 +248,8 @@ namespace Assignment3
             if (radioButtonImperial.Checked)
             {
                 labelHeight.Text = "Height (ft)";
+                labelFeet.Text = "ft";
+                labelInch.Text = "in";
                 labelWeight.Text = "Weight (lb)";
                 myBMICalculator.SetUnit(UnitTypes.Imperial);
             }

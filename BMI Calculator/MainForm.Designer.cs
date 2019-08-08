@@ -45,6 +45,8 @@
             this.groupBoxUnit = new System.Windows.Forms.GroupBox();
             this.radioButtonImperial = new System.Windows.Forms.RadioButton();
             this.groupBoxResult = new System.Windows.Forms.GroupBox();
+            this.labelFeet = new System.Windows.Forms.Label();
+            this.labelInch = new System.Windows.Forms.Label();
             this.groupBoxUnit.SuspendLayout();
             this.groupBoxResult.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +77,7 @@
             // 
             // textBoxHightInches
             // 
-            this.textBoxHightInches.Location = new System.Drawing.Point(145, 42);
+            this.textBoxHightInches.Location = new System.Drawing.Point(163, 42);
             this.textBoxHightInches.Name = "textBoxHightInches";
             this.textBoxHightInches.Size = new System.Drawing.Size(47, 20);
             this.textBoxHightInches.TabIndex = 3;
@@ -212,11 +214,31 @@
             this.groupBoxResult.Text = "Results for";
             this.groupBoxResult.Enter += new System.EventHandler(this.groupBoxResult_Enter);
             // 
+            // labelFeet
+            // 
+            this.labelFeet.AutoSize = true;
+            this.labelFeet.Location = new System.Drawing.Point(145, 45);
+            this.labelFeet.Name = "labelFeet";
+            this.labelFeet.Size = new System.Drawing.Size(13, 13);
+            this.labelFeet.TabIndex = 16;
+            this.labelFeet.Text = "ft";
+            // 
+            // labelInch
+            // 
+            this.labelInch.AutoSize = true;
+            this.labelInch.Location = new System.Drawing.Point(216, 45);
+            this.labelInch.Name = "labelInch";
+            this.labelInch.Size = new System.Drawing.Size(15, 13);
+            this.labelInch.TabIndex = 17;
+            this.labelInch.Text = "in";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 294);
+            this.Controls.Add(this.labelInch);
+            this.Controls.Add(this.labelFeet);
             this.Controls.Add(this.groupBoxResult);
             this.Controls.Add(this.groupBoxUnit);
             this.Controls.Add(this.labelWeight);
@@ -259,6 +281,8 @@
         private System.Windows.Forms.RadioButton radioButtonMetric;
         private System.Windows.Forms.RadioButton radioButtonImperial;
         private System.Windows.Forms.GroupBox groupBoxResult;
+        private System.Windows.Forms.Label labelFeet;
+        private System.Windows.Forms.Label labelInch;
     }
 }
 
