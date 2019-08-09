@@ -36,7 +36,7 @@ namespace Assignment3
         }
 
         // setter method overwrites value save in instance variable name by new value
-        public double GetHeigh()
+        public double GetHeight()
         {
             return height;
         }

@@ -40,8 +40,6 @@ namespace Assignment3
             // input
             radioButtonMetric.Checked = true;
             labelHeight.Text = "Height (cm)";
-            labelFeet.Text = "ft";
-            labelInch.Text = "in";
             labelWeight.Text = "Weight (kg)";
 
             // output
@@ -121,10 +119,12 @@ namespace Assignment3
             if (radioButtonMetric.Checked)
             {
                 myBMICalculator.SetUnit(UnitTypes.Metric);
+                labelInch.Visible = false;
             }
             else
             {
                 myBMICalculator.SetUnit(UnitTypes.Imperial);
+                labelInch.Visible = true;
             }
         }
 
@@ -145,7 +145,7 @@ namespace Assignment3
                         // convert ft to in
                         //myBMICalculator.SetHeight(outValue * 12.00);
 
-                        outValueTotal = outValue *12 + outValueInch;
+                        outValueTotal = outValue * 12 + outValueInch;
                         myBMICalculator.SetHeight(outValueTotal);
                     }
                     else
@@ -240,6 +240,9 @@ namespace Assignment3
             {
                 labelHeight.Text = "Height (cm)";
                 labelWeight.Text = "Weight (kg)";
+                textBoxHeightInches.Visible = false;
+                labelInch.Visible = false;
+                labelFeet.Visible = false;
                 myBMICalculator.SetUnit(UnitTypes.Metric);
             }
         }
@@ -253,6 +256,9 @@ namespace Assignment3
         {
             if (radioButtonImperial.Checked)
             {
+                textBoxHeightInches.Visible = true;
+                labelFeet.Visible = true;
+                labelInch.Visible = true;
                 labelHeight.Text = "Height (ft)";
                 labelFeet.Text = "ft";
                 labelInch.Text = "in";
