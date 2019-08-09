@@ -103,6 +103,7 @@ namespace Assignment3
             }
 
             bmiValue = conversionFactor * (weight / (height * height));
+            Console.Out.WriteLine(height);
 
             return bmiValue;
         }
@@ -141,6 +142,40 @@ namespace Assignment3
             {
                 stringOut = "Undeweight";
             }
+
+            return stringOut;
+        }
+
+        public string BmiWeightRange()
+        {
+            string stringOut = "";
+            Console.Out.WriteLine("height " + height);
+
+            if (height == 58)
+            {
+                stringOut = "Normal weight should be 91 to 115 lbs";
+            }
+            else if (height == 59)
+            {
+                stringOut = "Normal weight should be 94 to 119 lbs";
+            }
+            else if (height == 60)
+            {
+                stringOut = "Normal weight should be 97 to 123 lbs";
+            }
+            else if (height == 61)
+            {
+                stringOut = "Normal weight should be 100 to 127 lbs";
+            }
+            else if (height == 63)
+            {
+                stringOut = "Normal weight should be 104 to 131 lbs";
+            }
+            else
+            {
+                stringOut = " ";
+            }
+
             return stringOut;
         }
     }

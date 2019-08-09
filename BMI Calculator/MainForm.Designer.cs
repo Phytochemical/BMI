@@ -47,6 +47,7 @@
             this.groupBoxResult = new System.Windows.Forms.GroupBox();
             this.labelFeet = new System.Windows.Forms.Label();
             this.labelInch = new System.Windows.Forms.Label();
+            this.labelBMIWeightRange = new System.Windows.Forms.Label();
             this.groupBoxUnit.SuspendLayout();
             this.groupBoxResult.SuspendLayout();
             this.SuspendLayout();
@@ -201,6 +202,7 @@
             // 
             // groupBoxResult
             // 
+            this.groupBoxResult.Controls.Add(this.labelBMIWeightRange);
             this.groupBoxResult.Controls.Add(this.labelTextCalculateBMI);
             this.groupBoxResult.Controls.Add(this.labelTextWeightCategory);
             this.groupBoxResult.Controls.Add(this.labelDisclaimer);
@@ -208,7 +210,7 @@
             this.groupBoxResult.Controls.Add(this.labelWeightCategory);
             this.groupBoxResult.Location = new System.Drawing.Point(29, 151);
             this.groupBoxResult.Name = "groupBoxResult";
-            this.groupBoxResult.Size = new System.Drawing.Size(344, 118);
+            this.groupBoxResult.Size = new System.Drawing.Size(344, 135);
             this.groupBoxResult.TabIndex = 15;
             this.groupBoxResult.TabStop = false;
             this.groupBoxResult.Text = "Results for";
@@ -232,11 +234,19 @@
             this.labelInch.TabIndex = 17;
             this.labelInch.Text = "in";
             // 
+            // labelBMIWeightRange
+            // 
+            this.labelBMIWeightRange.Location = new System.Drawing.Point(15, 109);
+            this.labelBMIWeightRange.Name = "labelBMIWeightRange";
+            this.labelBMIWeightRange.Size = new System.Drawing.Size(279, 11);
+            this.labelBMIWeightRange.TabIndex = 13;
+            this.labelBMIWeightRange.Text = "BMI";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 294);
+            this.ClientSize = new System.Drawing.Size(418, 312);
             this.Controls.Add(this.labelInch);
             this.Controls.Add(this.labelFeet);
             this.Controls.Add(this.groupBoxResult);
@@ -283,6 +293,7 @@
         private System.Windows.Forms.GroupBox groupBoxResult;
         private System.Windows.Forms.Label labelFeet;
         private System.Windows.Forms.Label labelInch;
+        private System.Windows.Forms.Label labelBMIWeightRange;
     }
 }
 

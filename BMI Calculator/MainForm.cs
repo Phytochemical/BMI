@@ -94,6 +94,7 @@ namespace Assignment3
             // lblResultYourBmi.Text = bmiCalc.CalculateBMI ( ).ToString ("0.00"); 
             // BMIWEIGHTCATEGORY
             labelWeightCategory.Text = myBMICalculator.BmiWeightCategory().ToString();
+            labelBMIWeightRange.Text = myBMICalculator.BmiWeightRange().ToString();
             groupBoxResult.Text = "Results for " + myBMICalculator.GetName();
             //labelDisclaimer.Text = myBMICalculator.NormalWeight;
         }
@@ -146,6 +147,7 @@ namespace Assignment3
                         //myBMICalculator.SetHeight(outValue * 12.00);
 
                         outValueTotal = outValue * 12 + outValueInch;
+                        Console.Out.WriteLine("outValueTotal " + outValueTotal);
                         myBMICalculator.SetHeight(outValueTotal);
                     }
                     else
