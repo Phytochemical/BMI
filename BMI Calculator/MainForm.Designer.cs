@@ -30,8 +30,8 @@
         {
             this.buttonCalculateBMI = new System.Windows.Forms.Button();
             this.textUerName = new System.Windows.Forms.TextBox();
-            this.textBoxHightFeet = new System.Windows.Forms.TextBox();
-            this.textBoxHightInches = new System.Windows.Forms.TextBox();
+            this.textBoxHeightFeet = new System.Windows.Forms.TextBox();
+            this.textBoxHeightInches = new System.Windows.Forms.TextBox();
             this.textBoxWeight = new System.Windows.Forms.TextBox();
             this.labelHeight = new System.Windows.Forms.Label();
             this.labelUserName = new System.Windows.Forms.Label();
@@ -68,20 +68,20 @@
             this.textUerName.Size = new System.Drawing.Size(315, 20);
             this.textUerName.TabIndex = 1;
             // 
-            // textBoxHightFeet
+            // textBoxHeightFeet
             // 
-            this.textBoxHightFeet.Location = new System.Drawing.Point(92, 42);
-            this.textBoxHightFeet.Name = "textBoxHightFeet";
-            this.textBoxHightFeet.Size = new System.Drawing.Size(47, 20);
-            this.textBoxHightFeet.TabIndex = 2;
+            this.textBoxHeightFeet.Location = new System.Drawing.Point(92, 42);
+            this.textBoxHeightFeet.Name = "textBoxHeightFeet";
+            this.textBoxHeightFeet.Size = new System.Drawing.Size(47, 20);
+            this.textBoxHeightFeet.TabIndex = 2;
             // 
-            // textBoxHightInches
+            // textBoxHeightInches
             // 
-            this.textBoxHightInches.Location = new System.Drawing.Point(163, 42);
-            this.textBoxHightInches.Name = "textBoxHightInches";
-            this.textBoxHightInches.Size = new System.Drawing.Size(47, 20);
-            this.textBoxHightInches.TabIndex = 3;
-            this.textBoxHightInches.TextChanged += new System.EventHandler(this.textBoxHightInches_TextChanged);
+            this.textBoxHeightInches.Location = new System.Drawing.Point(163, 42);
+            this.textBoxHeightInches.Name = "textBoxHeightInches";
+            this.textBoxHeightInches.Size = new System.Drawing.Size(47, 20);
+            this.textBoxHeightInches.TabIndex = 3;
+            this.textBoxHeightInches.TextChanged += new System.EventHandler(this.textBoxHeightInches_TextChanged);
             // 
             // textBoxWeight
             // 
@@ -245,8 +245,8 @@
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.labelHeight);
             this.Controls.Add(this.textBoxWeight);
-            this.Controls.Add(this.textBoxHightInches);
-            this.Controls.Add(this.textBoxHightFeet);
+            this.Controls.Add(this.textBoxHeightInches);
+            this.Controls.Add(this.textBoxHeightFeet);
             this.Controls.Add(this.textUerName);
             this.Controls.Add(this.buttonCalculateBMI);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -266,8 +266,8 @@
 
         private System.Windows.Forms.Button buttonCalculateBMI;
         private System.Windows.Forms.TextBox textUerName;
-        private System.Windows.Forms.TextBox textBoxHightFeet;
-        private System.Windows.Forms.TextBox textBoxHightInches;
+        private System.Windows.Forms.TextBox textBoxHeightFeet;
+        private System.Windows.Forms.TextBox textBoxHeightInches;
         private System.Windows.Forms.TextBox textBoxWeight;
         private System.Windows.Forms.Label labelHeight;
         private System.Windows.Forms.Label labelUserName;

@@ -45,7 +45,7 @@ namespace Assignment3
             labelWeight.Text = "Weight (kg)";
 
             // output
-            textBoxHightFeet.Text = "";
+            textBoxHeightFeet.Text = "";
             labelFeet.Text = "";
             labelInch.Text = "";
             textBoxWeight.Text = "";
@@ -131,16 +131,22 @@ namespace Assignment3
         private bool ReadHeight()
         {
             double outValue = 0;
-            bool inputValid = double.TryParse(textBoxHightFeet.Text, out outValue);
+            double outValueInch = 0;
+            double outValueTotal = 0;
+            bool inputValid = double.TryParse(textBoxHeightFeet.Text, out outValue);
+            bool inputValidInch = double.TryParse(textBoxHeightInches.Text, out outValueInch);
 
             if (inputValid)
             {
-                if (outValue > 0)
+                if (outValue > 0 || outValueInch > 0)
                 {
                     if (myBMICalculator.GetUnit() == UnitTypes.Imperial)
                     {
                         // convert ft to in
-                        myBMICalculator.SetHeight(outValue * 12.00);
+                        //myBMICalculator.SetHeight(outValue * 12.00);
+
+                        outValueTotal = outValue *12 + outValueInch;
+                        myBMICalculator.SetHeight(outValueTotal);
                     }
                     else
                     {
@@ -213,7 +219,7 @@ namespace Assignment3
 
         }
 
-        private void textBoxHightInches_TextChanged(object sender, EventArgs e)
+        private void textBoxHeightInches_TextChanged(object sender, EventArgs e)
         {
 
         }

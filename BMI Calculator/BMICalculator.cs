@@ -36,12 +36,25 @@ namespace Assignment3
         }
 
         // setter method overwrites value save in instance variable name by new value
-        public double GetHeight()
+        public double GetHeigh()
         {
             return height;
         }
 
         public void SetHeight(double doubleValue)
+        {
+            if (doubleValue >= 0)
+            {
+                height = doubleValue;
+            }
+        }
+
+        public double GetHeightInches()
+        {
+            return height;
+        }
+
+        public void SetHeightInches(double doubleValue)
         {
             if (doubleValue >= 0)
             {
