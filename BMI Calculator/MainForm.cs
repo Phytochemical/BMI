@@ -38,14 +38,14 @@ namespace Assignment3
             this.Text = "BMI calculator";
 
             // input
-            radioButtonMetric.Checked = true;
-            labelHeight.Text = "Height (cm)";
-            labelWeight.Text = "Weight (kg)";
+            radioButtonImperial.Checked = true;
+            labelHeight.Text = "Height (ft)";
+            labelWeight.Text = "Weight (lb)";
 
             // output
             textBoxHeightFeet.Text = "";
-            labelFeet.Text = "";
-            labelInch.Text = "";
+            labelFeet.Text = "ft";
+            labelInch.Text = "in";
             textBoxWeight.Text = "";
         }
 
@@ -94,9 +94,8 @@ namespace Assignment3
             // lblResultYourBmi.Text = bmiCalc.CalculateBMI ( ).ToString ("0.00"); 
             // BMIWEIGHTCATEGORY
             labelWeightCategory.Text = myBMICalculator.BmiWeightCategory().ToString();
-            labelBMIWeightRange.Text = myBMICalculator.BmiWeightRange().ToString();
+            labelBmiWeightRange.Text = myBMICalculator.BmiWeightRange().ToString();
             groupBoxResult.Text = "Results for " + myBMICalculator.GetName();
-            //labelDisclaimer.Text = myBMICalculator.NormalWeight;
         }
 
         /// <summary>
@@ -121,6 +120,7 @@ namespace Assignment3
             {
                 myBMICalculator.SetUnit(UnitTypes.Metric);
                 labelInch.Visible = false;
+                labelBmiWeightRange.Visible = true;
             }
             else
             {
@@ -147,11 +147,11 @@ namespace Assignment3
                         //myBMICalculator.SetHeight(outValue * 12.00);
 
                         outValueTotal = outValue * 12 + outValueInch;
-                        Console.Out.WriteLine("outValueTotal " + outValueTotal);
                         myBMICalculator.SetHeight(outValueTotal);
                     }
                     else
                     {
+                        // convert cm to m
                         myBMICalculator.SetHeight(outValue / 100.0);
                     }
                 }
