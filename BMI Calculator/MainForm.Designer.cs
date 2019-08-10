@@ -45,9 +45,9 @@
             this.groupBoxUnit = new System.Windows.Forms.GroupBox();
             this.radioButtonImperial = new System.Windows.Forms.RadioButton();
             this.groupBoxResult = new System.Windows.Forms.GroupBox();
+            this.labelBMIWeightRange = new System.Windows.Forms.Label();
             this.labelFeet = new System.Windows.Forms.Label();
             this.labelInch = new System.Windows.Forms.Label();
-            this.labelBMIWeightRange = new System.Windows.Forms.Label();
             this.groupBoxUnit.SuspendLayout();
             this.groupBoxResult.SuspendLayout();
             this.SuspendLayout();
@@ -216,6 +216,14 @@
             this.groupBoxResult.Text = "Results for";
             this.groupBoxResult.Enter += new System.EventHandler(this.groupBoxResult_Enter);
             // 
+            // labelBMIWeightRange
+            // 
+            this.labelBMIWeightRange.ForeColor = System.Drawing.Color.Green;
+            this.labelBMIWeightRange.Location = new System.Drawing.Point(15, 109);
+            this.labelBMIWeightRange.Name = "labelBMIWeightRange";
+            this.labelBMIWeightRange.Size = new System.Drawing.Size(279, 11);
+            this.labelBMIWeightRange.TabIndex = 13;
+            // 
             // labelFeet
             // 
             this.labelFeet.AutoSize = true;
@@ -233,14 +241,6 @@
             this.labelInch.Size = new System.Drawing.Size(15, 13);
             this.labelInch.TabIndex = 17;
             this.labelInch.Text = "in";
-            // 
-            // labelBMIWeightRange
-            // 
-            this.labelBMIWeightRange.Location = new System.Drawing.Point(15, 109);
-            this.labelBMIWeightRange.Name = "labelBMIWeightRange";
-            this.labelBMIWeightRange.Size = new System.Drawing.Size(279, 11);
-            this.labelBMIWeightRange.TabIndex = 13;
-            this.labelBMIWeightRange.Text = "BMI";
             // 
             // MainForm
             // 

@@ -167,9 +167,65 @@ namespace Assignment3
             {
                 stringOut = "Normal weight should be 100 to 127 lbs";
             }
+            else if (height == 62)
+            {
+                stringOut = "Normal weight should be 104 to 131 lbs.";
+            }
             else if (height == 63)
             {
-                stringOut = "Normal weight should be 104 to 131 lbs";
+                stringOut = "Normal weight should be 107 to 135 lbs";
+            }
+            else if (height == 64)
+            {
+                stringOut = "Normal weight should be 110 to 140 lbs";
+            }
+            else if (height == 65)
+            {
+                stringOut = "Normal weight should be 114 to 144 lbs";
+            }
+            else if (height == 66)
+            {
+                stringOut = "Normal weight should be 118 to 148 lbs";
+            }
+            else if (height == 67)
+            {
+                stringOut = "Normal weight should be 121 to 153 lbs";
+            }
+            else if (height == 68)
+            {
+                stringOut = "Normal weight should be 125 to 158 lbs";
+            }
+            else if (height == 69)
+            {
+                stringOut = "Normal weight should be 128 to 162 lbs";
+            }
+            else if (height == 70)
+            {
+                stringOut = "Normal weight should be 132 to 167 lbs";
+            }
+            else if (height == 71)
+            {
+                stringOut = "Normal weight should be 136 to 172 lbs";
+            }
+            else if (height == 72)
+            {
+                stringOut = "Normal weight should be 140 to 177 lbs";
+            }
+            else if (height == 73)
+            {
+                stringOut = "Normal weight should be 144 to 182 lbs";
+            }
+            else if (height == 74)
+            {
+                stringOut = "Normal weight should be 148 to 186 lbs";
+            }
+            else if (height == 75)
+            {
+                stringOut = "Normal weight should be 152 to 192 lbs";
+            }
+            else if (height == 76)
+            {
+                stringOut = "Normal weight should be 156 to 197 lbs";
             }
             else
             {
