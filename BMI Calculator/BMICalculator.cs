@@ -14,14 +14,11 @@ namespace Assignment3
         // uses methods to return output
         // should be usable by any object
 
-        //TODO FIX WEIGHT RANGE
-
         private string name = "No name";
         private double height = 0;
         private double weight = 0;
         private UnitTypes unit;
 
-        // REFACTOR GETTER SETTER
         // returns value stored in filed name
         public string GetName()
         {

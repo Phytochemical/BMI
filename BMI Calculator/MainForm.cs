@@ -51,6 +51,7 @@ namespace Assignment3
 
         private void ReadName()
         {
+            // delete spaces at the beginning and end of text input
             textUerName.Text.Trim();
             if (!string.IsNullOrEmpty(textUerName.Text))
             {
@@ -91,7 +92,6 @@ namespace Assignment3
         private void DisplayResults()
         {
             labelCalculatedBMIOutput.Text = myBMICalculator.CalculateBMI().ToString("f2");
-            // lblResultYourBmi.Text = bmiCalc.CalculateBMI ( ).ToString ("0.00"); 
             // BMIWEIGHTCATEGORY
             labelWeightCategory.Text = myBMICalculator.BmiWeightCategory().ToString();
             labelBmiWeightRange.Text = myBMICalculator.BmiWeightRange().ToString();
