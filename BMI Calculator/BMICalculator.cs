@@ -150,6 +150,8 @@ namespace Assignment3
             public string BmiWeightRange()
         {
             double bmi = CalculateBMI();
+            double weight1;
+            double weight2;
             string stringOut = "";
 
             if (unit == UnitTypes.Metric && (bmi >= 18.5 && bmi <= 24.9))
@@ -245,94 +247,10 @@ namespace Assignment3
             }
             else if (unit == UnitTypes.Imperial && (bmi >= 18.5 && bmi <= 24.9))
             {
-                if (height == 56)
-                {
-                    stringOut = "Normal weight should be 91 to 115 lbs";
-                }
-                else if (height == 57)
-                {
-                    stringOut = "Normal weight should be 91 to 115 lbs";
-                }
-                else if (height == 58)
-                {
-                    stringOut = "Normal weight should be 91 to 115 lbs";
-                }
-                else if (height == 59)
-                {
-                    stringOut = "Normal weight should be 94 to 119 lbs";
-                }
-                else if (height == 60)
-                {
-                    stringOut = "Normal weight should be 95 to 127 lbs";
-                }
-                else if (height == 61)
-                {
-                    stringOut = "Normal weight should be 98 to 131 lbs";
-                }
-                else if (height == 62)
-                {
-                    stringOut = "Normal weight should be 104 to 131 lbs.";
-                }
-                else if (height == 63)
-                {
-                    stringOut = "Normal weight should be 107 to 135 lbs";
-                }
-                else if (height == 64)
-                {
-                    stringOut = "Normal weight should be 108 to 145 lbs";
-                }
-                else if (height == 65)
-                {
-                    stringOut = "Normal weight should be 112 to 149 lbs";
-                }
-                else if (height == 66)
-                {
-                    stringOut = "Normal weight should be 118 to 148 lbs";
-                }
-                else if (height == 67)
-                {
-                    stringOut = "Normal weight should be 121 to 153 lbs";
-                }
-                else if (height == 68)
-                {
-                    stringOut = "Normal weight should be 125 to 158 lbs";
-                }
-                else if (height == 69)
-                {
-                    stringOut = "Normal weight should be 128 to 162 lbs";
-                }
-                else if (height == 70)
-                {
-                    stringOut = "Normal weight should be 132 to 167 lbs";
-                }
-                else if (height == 71)
-                {
-                    stringOut = "Normal weight should be 136 to 172 lbs";
-                }
-                else if (height == 72)
-                {
-                    stringOut = "Normal weight should be 137 to 181 lbs";
-                }
-                else if (height == 73)
-                {
-                    stringOut = "Normal weight should be 141 to 189 lbs";
-                }
-                else if (height == 74)
-                {
-                    stringOut = "Normal weight should be 145 to 193 lbs";
-                }
-                else if (height == 75)
-                {
-                    stringOut = "Normal weight should be 149 to 199 lbs";
-                }
-                else if (height == 76)
-                {
-                    stringOut = "Normal weight should be 154 to 203 lbs";
-                }
-                else
-                {
-                    stringOut = " ";
-                }
+                weight1 = Math.Round(18.50 * (height * height) / 703);
+                weight2 = Math.Round(24.90 * (height * height) / 703);
+
+                stringOut = ($"Normal weight should be {weight1} to {weight2} lbs");
             }
 
             return stringOut;

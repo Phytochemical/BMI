@@ -272,5 +272,10 @@ namespace Assignment3
         private void groupBoxResult_Enter(object sender, EventArgs e)
         {
         }
+
+        private void labelBmiWeightRange_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

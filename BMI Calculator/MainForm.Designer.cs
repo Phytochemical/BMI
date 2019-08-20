@@ -223,6 +223,7 @@
             this.labelBmiWeightRange.Name = "labelBmiWeightRange";
             this.labelBmiWeightRange.Size = new System.Drawing.Size(279, 11);
             this.labelBmiWeightRange.TabIndex = 13;
+            this.labelBmiWeightRange.Click += new System.EventHandler(this.labelBmiWeightRange_Click);
             // 
             // labelFeet
             // 
