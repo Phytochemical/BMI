@@ -156,94 +156,10 @@ namespace Assignment3
 
             if (unit == UnitTypes.Metric && (bmi >= 18.5 && bmi <= 24.9))
             {
-                if (height >= 1.42 && height <= 1.45)
-                {
-                    stringOut = "Normal weight should be 38 to 50 kg";
-                }
-                else if (height >= 1.44 && height <= 1.46)
-                {
-                    stringOut = "Normal weight should be 40 to 52 kg";
-                }
-                else if (height >= 1.47 && height <= 1.48)
-                {
-                    stringOut = "Normal weight should be 40 to 52 kg";
-                }
-                else if (height >= 1.49 && height <= 1.51)
-                {
-                    stringOut = "Normal weight should be 41 to 54 kg";
-                }
-                else if (height >= 1.52 && height <= 1.53)
-                {
-                    stringOut = "Normal weight should be 41 to 54 kg";
-                }
-                else if (height >= 1.54 && height <= 1.56)
-                {
-                    stringOut = "Normal weight should be 45 to 59 kg";
-                }
-                else if (height >= 1.57 && height <= 1.59)
-                {
-                    stringOut = "Normal weight should be 47 to 61 kg";
-                }
-                else if (height >= 1.60 && height <= 1.61)
-                {
-                    stringOut = "Normal weight should be 47 to 63 kg";
-                }
-                else if (height >= 1.62 && height <= 1.64)
-                {
-                    stringOut = "Normal weight should be 50 to 65 kg";
-                }
-                else if (height >= 1.65 && height <= 1.66)
-                {
-                    stringOut = "Normal weight should be 52 to 65 kg";
-                }
-                else if (height >= 1.67 && height <= 1.69)
-                {
-                    stringOut = "Normal weight should be 52 to 68 kg";
-                }
-                else if (height >= 1.70 && height <= 1.71)
-                {
-                    stringOut = "Normal weight should be 52 to 68 kg";
-                }
-                else if (height >= 1.72 && height <= 1.74)
-                {
-                    stringOut = "Normal weight should be 56 to 72 kg";
-                }
-                else if (height >= 1.75 && height <= 1.76)
-                {
-                    stringOut = "Normal weight should be 59 to 75 kg";
-                }
-                else if (height >= 1.77 && height <= 1.79)
-                {
-                    stringOut = "Normal weight should be 59 to 74 kg";
-                }
-                else if (height >= 1.80 && height <= 1.81)
-                {
-                    stringOut = "Normal weight should be 61 to 79 kg";
-                }
-                else if (height >= 1.82 && height <= 1.84)
-                {
-                    stringOut = "Normal weight should be 63 to 81 kg";
-                }
-                else if (height >= 1.85 && height <= 1.86)
-                {
-                    stringOut = "Normal weight should be 63 to 84 kg";
-                }
-                else if (height >= 1.87 && height <= 1.89)
-                {
-                    stringOut = "Normal weight should be 65 to 86 kg";
-                }
-                else if (height >= 1.90 && height <= 1.92)
-                {
-                    stringOut = "Normal weight should be 68 to 152 kg";
-                }
-                else if (height >= 1.93)
-                {
-                    stringOut = "Normal weight should be 70 to 90 kg";
-                }
-                else
-                {
-                    stringOut = " ";
-                }
+                weight1 = Math.Round(18.50 * (height * height));
+                weight2 = Math.Round(24.90 * (height * height));
+
+                stringOut = ($"Normal weight should be {weight1} to {weight2} kg");
             }
             else if (unit == UnitTypes.Imperial && (bmi >= 18.5 && bmi <= 24.9))
             {
@@ -252,8 +168,12 @@ namespace Assignment3
 
                 stringOut = ($"Normal weight should be {weight1} to {weight2} lbs");
             }
+            else
+            {
+                stringOut = " ";
+            }
 
-            return stringOut;
-        }
+                return stringOut;
+            }
     }
 }
